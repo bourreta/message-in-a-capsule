@@ -1,0 +1,104 @@
+
+       
+        <!--Capsules-->
+      <div id="screen">
+              	<div class="stars small"></div>
+    	<div class="stars medium"></div>
+    	<div class="stars large"></div>
+              <button id="modalBtn" class="instruction-button">?</button>
+               <button id="addMessageBtn" class="add-button">+</button>
+            <div id="capsuleHorz_1">
+                <div id="capsuleVert_1">
+                    <div id="capsuleRotate">
+                        <img id="capsule_1" src="asteroid.png">
+                    </div>
+                </div>
+            </div>
+                <div id="capsuleHorz_2" >
+                    <div id="capsuleVert_2" onclick="toggleAnimation(this)">
+                        <div id="capsuleRotate">
+                            <img id="capsule_2" src="asteroid.png">
+                        </div>
+                </div>
+            </div>
+            <div id="capsuleHorz_3" onclick="toggleAnimation(this)">
+                    <div id="capsuleVert_3" onclick="toggleAnimation(this)">
+                        <div id="capsuleRotate">
+                            <img id="capsule_3" src="Space_pod.png">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Instruction Modal-->
+
+        <div id="instructionModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modal-body">
+                    <h1>Message In A Capsule</h1>
+                    <hr>
+                    <p>1.  A special message has travelled at light speed through the universe and found its way to you! Click on the floating capsule to open it.</p>
+                    <br>
+                    <p>2.  Create your own special message and cast it adrift into the universe. Who will read it? No one knows.</p>
+                </div>
+            </div>
+
+        </div>
+
+        L<!--Message Modal-->
+        
+        <div id="messageModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modal-body">
+                    <h1>Message</h1>
+                    <h2 id="messageSender" >Sender: </h2>
+                    <hr>
+                    <p id="messageContent">Message Here</p>
+                    <br>
+                    <hr>
+                    <span>Did you like this message?</span>
+                    <button class="vote-buttons" id="upVote">Yes</i></button>
+                    <button class="vote-buttons" id="downVote">No</i></button>
+
+                </div>
+            </div>
+        </div>
+
+        L<!--Add Message Modal-->
+        
+        <div id="addMessageModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modal-body">
+                    <h1>CREATE A MESSAGE</h1>
+                    <span>&bull; Write a message for your own capsule </span>
+                    <br>
+                    <span>&bull; 40 character minimum</span>
+                    <hr>
+
+                    <form method="POST" id="modal-form">
+         
+                        <label for="name">Sender:</label>
+                        <br>
+                        <input type="text" id="newName" name="name" minlength="2" maxlength="50" required>
+                        
+                        <br>
+                        <label for="message">Message:</label><p id="numChars">0/400</p>
+                        <textarea id="newMessage" name="message" rows="10" cols="50" oninput="countChars(this)" minlength="40" maxlength="400" required></textarea>
+                        <input id="submitBtn" type="submit" value="SEND">
+       
+                    </form>
+                    <div id="message-sent">
+                        <h2>Thanks for your message. 
+                            <br> It has been sent on its way.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="animationControl.js"></script>
+        <script type="text/javascript" src="instructionModal.js"></script>
+        <script type="text/javascript" src="messageModal.js"></script>
+        <script type="text/javascript" src="addMessageModal.js"></script>

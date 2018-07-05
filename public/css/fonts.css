@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'visitor_tt1_brkregular';
+    src: url('Fonts/visitor1-webfont.woff2') format('woff2'),
+         url('Fonts/visitor1-webfont.woff') format('woff');
+    src: url('Fonts/visitor1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'upheaval_tt_brkregular';
+    src: url('Fonts/upheavtt-webfont.woff2') format('woff2'),
+         url('Fonts/upheavtt-webfont.woff') format('woff');
+    src: url('Fonts/upheavtt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'vt323regular';
+    src: url('Fonts/vt323-regular-webfont.woff2') format('woff2'),
+         url('Fonts/vt323-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'commodore_64_roundedregular';
+    src: url('Fonts/commodore_rounded_v1.2-webfont.woff2') format('woff2'),
+         url('Fonts/commodore_rounded_v1.2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

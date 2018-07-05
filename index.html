@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <style>
+
+            html{
+                background-color: black;
+            }
+            #screen{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            
+            #capsuleHorz_1{
+                position: absolute;
+                left: -100px;
+                bottom: 0;
+                width: 100px;
+                height: 100px;
+                animation: moveHorz 25s linear infinite;
+            }
+            
+            #capsuleHorz_2{
+                position: absolute;
+                left: -100px;
+                bottom: 0;
+                width: 100px;
+                height: 100px;
+                animation: moveHorz 15s linear infinite;
+            }
+            
+            
+            #capsuleVert_1{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                animation: moveVert_1 25s infinite;
+            }
+            
+                        
+            #capsuleVert_2{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                animation: moveVert_2 10s infinite;
+            }
+            
+            
+            .paused{
+                animation-play-state: paused !important;
+            }
+            
+            #capsuleRotate{
+                animation: spin 4s linear infinite;
+            }
+            
+            
+            #capsule_1{
+                width: 100px;
+                height: 100px;
+                /*background: #ff5c3c;*/
+                border-radius: 100px;
+                
+                /*animation: changeShape 16s infinite;*/
+            }
+            
+            #capsule_2{
+                width: 100px;
+                height: 100px;
+                /*background: #ff5c3c;*/
+                border-radius: 100px;
+                
+                /*animation: changeShape 16s infinite;*/
+            }
+
+            @keyframes moveHorz
+            {
+                0% { transform: translateX(0vw); }
+                100% { transform: translateX(110vw); }
+            }
+            
+            @keyframes moveVert_1{
+                0%, 50%, 100% { transform: translateY(-50vh); 
+                    animation-timing-function: ease-in-out; }
+                25%, 75% { transform: translateY(-20vh); animation-timing-function: ease-in-out; }
+            }
+            
+            @keyframes moveVert_2{
+                0%, 50%, 100% { transform: translateY(-70vh); 
+                    animation-timing-function: ease-in-out; }
+                25%, 75% { transform: translateY(-40vh); animation-timing-function: ease-in-out; }
+            }
+            
+            
+            @keyframes spin {
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+     
+            }
+            /*@keyframes changeShape{
+                0%, 10%, 20%, 35%, 45%, 60%, 70%, 85%, 95%, 100% { transform: scaleX(1.0) scaleY(1.0);}
+                11%, 36%, 61%, 86% { transform: scaleX(1.4) scaleY(0.6); }
+                15%, 40%, 65%, 90% { transform: scaleX(0.6) scaleY(1.4); }
+            }*/
+        </style>
+    </head>
+    
+    <body>
+        <div id="screen">
+            <div id="capsuleHorz_1">
+                <div id="capsuleVert_1" onclick="toggleAnimation()">
+                    <div id="capsuleRotate">
+                        <img id="capsule_1" src="Space_pod.png">
+                    </div>
+                </div>
+            </div>
+                <div id="capsuleHorz_2">
+                    <div id="capsuleVert_2" onclick="toggleAnimation()">
+                        <div id="capsuleRotate">
+                            <img id="capsule_2" src="Space_pod.png">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <script>  
+            var toggled = false;
+            function toggleAnimation(){
+                if(!toggled){
+                    document.getElementById('ballMainDiv').classList.add('paused');
+                    document.getElementById('ballSubDiv').classList.add('paused');
+                    toggled = true;
+                }else{
+                    document.getElementById('ballMainDiv').classList.remove('paused');
+                    document.getElementById('ballSubDiv').classList.remove('paused');
+                    toggled = false;
+                }
+            }
+        
+        </script>
+    </body>
+</html>
