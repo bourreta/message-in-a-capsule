@@ -1,0 +1,6 @@
+{
+	"name": "Message In A Capsule",
+	"description": "A Node.js app for sharing random messages across the web.",
+	"repository": "https://github.com/bourreta/message-in-a-capsule.git",
+	"keywords": ["node", "express", "static"]
+}
