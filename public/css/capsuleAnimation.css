@@ -26,8 +26,8 @@ body{
     position: absolute;
     left: -100px;
     bottom: 0;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     animation-play-state: running;
     animation: moveHorz 15s linear infinite;
 }
@@ -53,8 +53,8 @@ body{
             
 #capsuleVert_2{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     animation-play-state: running;
     animation: moveVert_2 9s infinite;
 }
@@ -68,7 +68,7 @@ body{
 }
 
 #capsuleRotate{
-    animation: spin 4s linear infinite;
+   animation: spin 4s linear infinite;
 }
 
 
@@ -79,29 +79,26 @@ body{
 }
 
 #capsule_2{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border-radius: 100px;
 }
 
 #capsule_3{
     width: 100px;
     height: 100px;
-  
 }
 
 #capsule_3:hover{
     cursor: pointer;
 }
 
-@keyframes moveHorz
-{
+@keyframes moveHorz{
     0% { transform: translateX(0vw); }
     100% { transform: translateX(110vw); }
 }
 
-@keyframes moveHorzReverse
-{
+@keyframes moveHorzReverse{
     0% { transform: translateX(110vw); }
     100% { transform: translateX(0vw); }
 }
@@ -130,6 +127,11 @@ body{
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(360deg);
+        transform: rotate(359deg);
     }
 }
+
+
+
+
+
