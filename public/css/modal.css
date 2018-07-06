@@ -4,6 +4,12 @@ body{
     line-height: 1.6;
 }
 
+
+a {
+    color: #c2e9ff;
+}
+
+
 .instruction-button{
     position: fixed;
     left: -50px;
